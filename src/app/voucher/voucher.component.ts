@@ -11,18 +11,21 @@ import { VoucherState } from '@app/voucher/voucher.state';
 
 export class VoucherComponent implements OnInit {
 
-  // dataToShow$: Observable<Array<State>>;
-  dataToShow$: VoucherState[];
+  dataToShow$: any;
 
-  constructor(private voucherService: VoucherService, private localStorageService: LocalStorageService) {}
+  constructor(private voucherService: VoucherService, private localStorageService: LocalStorageService) { }
 
   ngOnInit() {
-    if (!this.localStorageService.seeIfLocalStorage() || this.localStorageService.getLocalStorage() === null){
-      this.voucherService.getVoucher().subscribe(data => this.dataToShow$ = data);
-      this.localStorageService.setLocalStorage(this.dataToShow$)
+    if (!this.localStorageService.seeIfLocalStorage() || this.localStorageService.getLocalStorage() === null) {
+      this.voucherService.getVoucher().subscribe(data => { 
+        console.log('response:', data);
+        this.dataToShow$ = data.VoucherDetail;
+        this.localStorageService.setLocalStorage(this.dataToShow$); });
+
     }
-    else{
+    else {
       this.dataToShow$ = this.localStorageService.getLocalStorage();
+      console.log(this.dataToShow$)
     }
   }
 

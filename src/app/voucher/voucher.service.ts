@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { VoucherState } from '@app/voucher/voucher.state';
+import { VoucherState, VoucherDetail } from '@app/voucher/voucher.state';
 import { Observable } from 'rxjs';
 
 
@@ -13,8 +13,8 @@ export class VoucherService {
 
   constructor(private http: HttpClient) {  }
 
-  getVoucher(): Observable<VoucherState[]> {
-    return this.http.get<VoucherState[]>(this.voucherURL)
+  getVoucher(): Observable<VoucherState> {
+    return this.http.get<VoucherState>(this.voucherURL)
   }
 
 }

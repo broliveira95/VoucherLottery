@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { VoucherState } from '@app/voucher/voucher.state';
+import { VoucherState, VoucherDetail } from '@app/voucher/voucher.state';
 
 
 @Injectable()
@@ -10,9 +10,8 @@ export class LocalStorageService {
 
     constructor(){}
 
-    setLocalStorage(serviceResponse: VoucherState[]) {
+    setLocalStorage(serviceResponse: VoucherDetail) {
         window.localStorage.setItem(this.voucherKey,  JSON.stringify(serviceResponse));
-        window.localStorage.setItem('ppppppppp', "dfhkfdhkguk")
     }
     
     getLocalStorage() {
@@ -20,7 +19,7 @@ export class LocalStorageService {
     }
 
     seeIfLocalStorage(): Boolean {
-        if (window.localStorage.key(1) === this.voucherKey){
+        if (window.localStorage.key(0) === this.voucherKey){
             return true;
         }
         else return false;
