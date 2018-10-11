@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { VoucherService } from '@app/voucher/voucher.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LocalStorageService } from '@app/local-storage.service';
+
 
 @NgModule({
   declarations: [
@@ -10,9 +14,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [VoucherService, LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

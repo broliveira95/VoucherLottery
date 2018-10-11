@@ -1,0 +1,33 @@
+<div class="header">
+  <img class="logoToLife" src="../assets/logoToLife@3x.png" alt="Logo ToLife">
+</div>
+
+
+<div class="main">
+  <div *ngIf="dataToShow$" class="text-center">
+    <div class="image1">
+      <img class="img-fluid" alt="Image1" src="{{ dataToShow$.VoucherDetail.ImageUrl }}" style="max-height: 300px">
+    </div>
+    <p>
+      VoucherLottery
+    </p>
+    <p class="text-lg"> Description: {{dataToShow$.VoucherDetail.Description }}</p>
+    <!-- <p>description: {{ ( dataToShow$ | async ).VoucherDetail.Description }}</p>
+      <p>image: {{ ( dataToShow$ | async ).VoucherDetail.ImageUrl }}</p>
+      <p>qrCode: {{ ( dataToShow$ | async ).VoucherDetail.QRCodeImageUrl }}</p> -->
+
+
+
+    <!--<img class="bottomLeft" alt="Image" src="../assets/bottomLeft.png">
+    <img class="bottomRight" alt="Image" src="../assets/bottomRight.png">-->
+
+    <div class="qrCode">
+      <img class="img-fluid" alt="QR Code" src="{{dataToShow$.VoucherDetail.QRCodeImageUrl}}" style="max-height: 200px">
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <p>&nbsp;</p>
+</div>
