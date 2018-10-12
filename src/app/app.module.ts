@@ -6,18 +6,21 @@ import { AppComponent } from './app.component';
 import { VoucherService } from '@app/voucher/voucher.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LocalStorageService } from '@app/local-storage.service';
+import { VoucherComponent } from './voucher/voucher.component';
+import { SetLoginService } from './login/setLogin.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VoucherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [VoucherService, LocalStorageService],
+  providers: [VoucherService, LocalStorageService, SetLoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

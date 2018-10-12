@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { environment } from '@env/environment';
 
@@ -8,12 +8,12 @@ import { environment } from '@env/environment';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent{
 
   title = 'voucher-lottery';
 
   constructor() {
     console.log({ environment });
   }
-  
+
 }

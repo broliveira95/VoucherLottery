@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { VoucherState, VoucherDetail } from '@app/voucher/voucher.state';
+import { VoucherState } from '@app/voucher/voucher.state';
 import { Observable } from 'rxjs';
+import { environment } from '@env/environment';
 
 
 @Injectable({
@@ -9,12 +10,12 @@ import { Observable } from 'rxjs';
 })
 export class VoucherService {
 
-  private voucherURL = 'https://inngagebeapipresalesv2.azurewebsites.net/oData/VoucherLottery'
+  private URL = environment.voucherURL
 
   constructor(private http: HttpClient) {  }
 
   getVoucher(): Observable<VoucherState> {
-    return this.http.get<VoucherState>(this.voucherURL)
+    return this.http.get<VoucherState>(this.URL)
   }
 
 }

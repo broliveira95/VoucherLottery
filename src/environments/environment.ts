@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  voucherURL: 'https://inngagebeapipresalesv2.azurewebsites.net/oData/VoucherLottery',
+  showLogin: true
 };
 
 /*
