@@ -34,7 +34,11 @@ export class VoucherComponent implements OnInit {
           this.route.navigate(['voucher']);
           console.log("error");
         }
-      });
+      },
+      err => {
+          this.route.navigate(["error"]);
+        }
+      );
 
     }
     else {
