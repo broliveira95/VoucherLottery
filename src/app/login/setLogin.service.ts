@@ -14,7 +14,6 @@ const httpOptions = {
 @Injectable()
 export class SetLoginService {
 
-   
     url = 'https://inngagebeapipresalesv2.azurewebsites.net/oData/VoucherLotteryEmail';
 
     constructor(private http: HttpClient) { }

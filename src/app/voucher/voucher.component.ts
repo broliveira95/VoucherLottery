@@ -3,7 +3,7 @@ import { VoucherService } from '@app/voucher/voucher.service';
 import { LocalStorageService } from '@app/local-storage.service';
 import { VoucherState } from '@app/voucher/voucher.state';
 import { environment } from '@env/environment';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-voucher',
@@ -15,20 +15,31 @@ export class VoucherComponent implements OnInit {
 
   dataToShow$: any;
   logoToShow: boolean = environment.showLogin;
+  code: number;
 
-  constructor(private voucherService: VoucherService, private localStorageService: LocalStorageService) { }
+
+  constructor(private voucherService: VoucherService, private localStorageService: LocalStorageService, private route: Router) { }
 
   ngOnInit() {
+
     if (!this.localStorageService.seeIfLocalStorage() || this.localStorageService.getLocalStorage() === null) {
-      this.voucherService.getVoucher().subscribe(data => { 
+      this.voucherService.getVoucher().subscribe(data => {
         console.log('response:', data);
-        this.dataToShow$ = data.VoucherDetail;
-        this.localStorageService.setLocalStorage(this.dataToShow$); });
+        this.code = data.Code;
+        if (this.code === 0) {
+          this.dataToShow$ = data.VoucherDetail;
+          this.localStorageService.setLocalStorage(this.dataToShow$);
+        }
+        else {
+          this.route.navigate(['voucher']);
+          console.log("error");
+        }
+      });
 
     }
     else {
       this.dataToShow$ = this.localStorageService.getLocalStorage();
-      console.log(this.dataToShow$)
+      console.log('aqui');
     }
   }
 

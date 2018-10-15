@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { VoucherComponent } from './voucher/voucher.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
   path: 'voucher',
   component: VoucherComponent
+},
+{
+  path: 'error',
+  component: ErrorComponent
 },
 ];
 

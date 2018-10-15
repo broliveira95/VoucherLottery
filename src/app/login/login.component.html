@@ -20,9 +20,16 @@
     </div>
     <div class="submitButton">
         <button *ngIf="!emailref.errors?.pattern" type="submit" class="btn btn-primary" (click)="submitEmail()">Submit</button><br>
-        <button *ngIf="emailref.errors?.pattern" type="submit" class="btn btn-primary" >Submit</button><br>
+        <button *ngIf="emailref.errors?.pattern" type="submit" class="btn btn-primary">Submit</button><br>
         <a *ngIf="showMessage"> *Please accept terms before submit </a>
     </div>
+
+    <div class="emailAlert">
+        <div [hidden]="!emailUsed" class="alert alert-danger">
+            This email already exists!
+        </div>
+    </div>
+
 </div>
 
 <div class="footer">

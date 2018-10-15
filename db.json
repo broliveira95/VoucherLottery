@@ -1,33 +1,13 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+  "posts": {
+    "Input": {
+      "Email": "wrf@sd.we"
     },
-    {
-      "Input": {
-        "Email": "aGSRTAY"
-      },
-      "UserData": {
-        "UserType": 5,
-        "AppVersion": 1,
-        "LanguageID": 1,
-        "AppID": "tech.innowave.gaminn.mkt.vvl"
-      },
-      "id": 2
-    },
-    {
-      "Input": {
-        "Email": "ASDTFGUKHIL"
-      },
-      "UserData": {
-        "UserType": 5,
-        "AppVersion": 1,
-        "LanguageID": 1,
-        "AppID": "tech.innowave.gaminn.mkt.vvl"
-      },
-      "id": 3
+    "UserData": {
+      "UserType": 5,
+      "AppVersion": "1",
+      "LanguageID": 1,
+      "AppID": "tech.innowave.gaminn.mkt.vvl"
     }
-  ]
+  }
 }

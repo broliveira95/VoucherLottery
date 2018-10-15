@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { LocalStorageService } from '@app/local-storage.service';
 import { VoucherComponent } from './voucher/voucher.component';
 import { SetLoginService } from './login/setLogin.service';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    VoucherComponent
+    VoucherComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

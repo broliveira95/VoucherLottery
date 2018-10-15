@@ -1,3 +1,5 @@
+$boxesWidth: 500px;
+
 .header {
     position: relative;
     left: 0px;
@@ -40,9 +42,13 @@ a{
 
 .form-group{
     padding-top: 10vh;
-    max-width: 500px;
+    max-width: $boxesWidth;
 }
 
 .submitButton{
     padding-top: 70px;
+}
+
+.emailAlert {
+    max-width: $boxesWidth;
 }
