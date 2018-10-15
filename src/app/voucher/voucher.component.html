@@ -1,5 +1,6 @@
 <div class="header">
-  <img class="logoToLife" src="../assets/logoToLife@3x.png" alt="Logo ToLife">
+  <img *ngIf="logoToShow" class="logo" src="../assets/innowaveLogo.png" alt="Logo">
+  <img *ngIf="!logoToShow" class="logo" src="../assets/logoToLife@3x.png" alt="Logo">
 </div>
 
 

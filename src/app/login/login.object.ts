@@ -1,9 +1,11 @@
 export class ObjectLogin {
-    Email: string
+    Input: Email
     UserData: UserData
 }
 
-
+export class Email {
+    Email: string;
+}
 export class UserData {
     UserType: number = 5;
     AppVersion: number = 1;

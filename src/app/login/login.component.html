@@ -1,5 +1,5 @@
 <div class="header">
-    <img class="logoToLife" src="../assets/logoToLife@3x.png" alt="Logo ToLife">
+    <img class="logo" src="../assets/innowaveLogo.png" alt="Logo">
 </div>
 
 <div class="main">
@@ -19,8 +19,9 @@
         <a for="exampleCheck1" href="https://www.google.com"> Agree with terms</a>
     </div>
     <div class="submitButton">
-        <button type="submit" class="btn btn-primary" (click)="submitEmail()">Submit</button><br>
-        <a *ngIf="showMessage"> *Please enter a valid email and accept terms before submit </a>
+        <button *ngIf="!emailref.errors?.pattern" type="submit" class="btn btn-primary" (click)="submitEmail()">Submit</button><br>
+        <button *ngIf="emailref.errors?.pattern" type="submit" class="btn btn-primary" >Submit</button><br>
+        <a *ngIf="showMessage"> *Please accept terms before submit </a>
     </div>
 </div>
 

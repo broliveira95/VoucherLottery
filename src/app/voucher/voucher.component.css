@@ -27,10 +27,11 @@ p{
     font-size: 5vw;
 }
 
-.logoToLife{
-    margin-top: 4%;
+.logo{
+    margin-top: 10px;
     margin-left: 15%;
     width: 15%;
+    min-width: 100px;
 }
 
 .image1{
@@ -53,30 +54,4 @@ p{
     padding-bottom: 13vh;
     margin-left: 20%;
     margin-right: 20%;
-
 }
-
-.topLeft{
-    margin-top: 5%;
-    margin-left: 39%;
-    width: 2%
-}
-
-.topRight{
-    margin-top: -4%;
-    margin-left: 59%;
-    width: 2%
-}
-
-.bottomLeft{
-    margin-top: -2%;
-    margin-left: 39%;
-    width: 2%
-}
-
-.bottomRight{
-    margin-top: -5.5%;
-    margin-left: 59%;
-    width: 2%
-}
-

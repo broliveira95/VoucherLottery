@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { VoucherService } from '@app/voucher/voucher.service';
 import { LocalStorageService } from '@app/local-storage.service';
 import { VoucherState } from '@app/voucher/voucher.state';
+import { environment } from '@env/environment';
+
 
 @Component({
   selector: 'app-voucher',
@@ -12,6 +14,7 @@ import { VoucherState } from '@app/voucher/voucher.state';
 export class VoucherComponent implements OnInit {
 
   dataToShow$: any;
+  logoToShow: boolean = environment.showLogin;
 
   constructor(private voucherService: VoucherService, private localStorageService: LocalStorageService) { }
 
