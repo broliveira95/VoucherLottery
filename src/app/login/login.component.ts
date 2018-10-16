@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from '@env/environment';
 import { SetLoginService } from './setLogin.service';
 import { LocalStorageService } from '@app/local-storage.service';
+import { AuthService } from '@app/auth/auth.service';
 
 @Component({
   selector: 'app-voucher',
@@ -12,7 +13,7 @@ import { LocalStorageService } from '@app/local-storage.service';
 
 export class LoginComponent implements OnInit {
 
-  constructor(private route: Router, private setLoginService: SetLoginService, private localStorageService: LocalStorageService) { }
+  constructor(private route: Router, private setLoginService: SetLoginService, private localStorageService: LocalStorageService, private authService: AuthService) { }
 
   newEmail: string = '';
   check: boolean = false;
@@ -29,7 +30,6 @@ export class LoginComponent implements OnInit {
     if (this.check && this.newEmail !== "") {
       this.showMessage = false;
       console.log(this.newEmail);
-
       this.setLoginService.addEmail(this.newEmail).subscribe(data => {
         console.log('response:', data)
         if (data.Code === 0) {
@@ -37,9 +37,10 @@ export class LoginComponent implements OnInit {
             this.emailUsed = true;
           }
           else {
-          this.localStorageService.setLocalStorage(data.VoucherDetail);
-          this.route.navigate(['voucher']);
-        }
+            this.authService.login();
+            this.localStorageService.setLocalStorage(data.VoucherDetail);
+            this.route.navigate(['voucher']);
+          }
         }
         else {
           this.route.navigate(['error']);

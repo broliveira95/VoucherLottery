@@ -12,6 +12,8 @@ import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthService } from './auth/auth.service';
 
 
 @NgModule({
@@ -26,9 +28,9 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
   ],
-  providers: [VoucherService, LocalStorageService, SetLoginService],
+  providers: [VoucherService, LocalStorageService, SetLoginService, AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

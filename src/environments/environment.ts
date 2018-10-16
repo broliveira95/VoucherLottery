@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   voucherURL: 'https://inngagebeapipresalesv2.azurewebsites.net/oData/VoucherLottery',
-  showLogin: true,
+  showLogin: false,
 };
 
 /*
