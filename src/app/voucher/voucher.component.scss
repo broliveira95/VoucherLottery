@@ -1,3 +1,7 @@
+
+$Size-corners: 20px;
+$Border-size-corners: 2px;
+
 .header {
     position: relative;
     left: 0px;
@@ -58,8 +62,8 @@ p{
 }
 
 .corner_bottomright { 
-    width: 20px; 
-    height: 20px; 
+    width: $Size-corners; 
+    height: $Size-corners; 
     bottom: 0; 
     right: 0; 
     position: absolute; 
@@ -69,12 +73,12 @@ p{
     border-left-color: transparent;
     border-top-color: transparent; 
     border-style: solid; 
-    border-width: 2px; 
+    border-width: $Border-size-corners; 
 }
 
 .corner_topright {
-    width: 20px; 
-    height: 20px; 
+    width: $Size-corners; 
+    height: $Size-corners; 
     top: 0; 
     right: 0; 
     position: absolute; 
@@ -84,12 +88,12 @@ p{
     border-left-color: transparent;
     border-top-color: white; 
     border-style: solid; 
-    border-width: 2px; 
+    border-width: $Border-size-corners; 
 }
 
 .corner_topleft {
-    width: 20px; 
-    height: 20px; 
+    width: $Size-corners; 
+    height: $Size-corners; 
     top: 0; 
     left: 0; 
     position: absolute; 
@@ -99,12 +103,12 @@ p{
     border-right-color: transparent;
     border-top-color: white; 
     border-style: solid; 
-    border-width: 2px; 
+    border-width: $Border-size-corners; 
 }
 
 .corner_bottomleft {
-    width: 20px; 
-    height: 20px; 
+    width: $Size-corners; 
+    height: $Size-corners; 
     bottom: 0; 
     left: 0; 
     position: absolute; 
@@ -114,5 +118,5 @@ p{
     border-right-color: transparent;
     border-top-color: transparent; 
     border-style: solid; 
-    border-width: 2px; 
+    border-width: $Border-size-corners; 
 }

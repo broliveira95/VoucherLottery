@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-voucher',
   templateUrl: './voucher.component.html',
-  styleUrls: ['./voucher.component.css']
+  styleUrls: ['./voucher.component.scss']
 })
 
 export class VoucherComponent implements OnInit {

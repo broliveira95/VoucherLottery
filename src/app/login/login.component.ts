@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '@env/environment';
 import { SetLoginService } from './setLogin.service';
-import { ObjectLogin } from '@app/login/login.object'
 import { LocalStorageService } from '@app/local-storage.service';
 
 @Component({
