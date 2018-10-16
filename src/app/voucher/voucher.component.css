@@ -24,7 +24,7 @@
 }
 
 p{
-    font-size: 5vw;
+    font-size: 35px;
 }
 
 .logo{
@@ -36,22 +36,83 @@ p{
 
 .image1{
     max-width: 100%;
-    padding-top: 7vh;
-    padding-bottom: 3vh;
+    padding-top: 7vw;
+    padding-bottom: 3vw;
     margin-left: 4%;
     margin-right: 4%;
-    margin-bottom: 4%;
 }
 
 .description{
-    padding: 7vh;
-    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    padding-top: 4vw;
 }
 
 .qrCode{
-    max-width: 100%;
     padding-top: 5vh;
     padding-bottom: 13vh;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex
+}
+
+.corner_bottomright { 
+    width: 20px; 
+    height: 20px; 
+    bottom: 0; 
+    right: 0; 
+    position: absolute; 
+    color: transparent; 
+    border-bottom-color: white; 
+    border-right-color: white; 
+    border-left-color: transparent;
+    border-top-color: transparent; 
+    border-style: solid; 
+    border-width: 2px; 
+}
+
+.corner_topright {
+    width: 20px; 
+    height: 20px; 
+    top: 0; 
+    right: 0; 
+    position: absolute; 
+    color: transparent; 
+    border-bottom-color: transparent; 
+    border-right-color: white; 
+    border-left-color: transparent;
+    border-top-color: white; 
+    border-style: solid; 
+    border-width: 2px; 
+}
+
+.corner_topleft {
+    width: 20px; 
+    height: 20px; 
+    top: 0; 
+    left: 0; 
+    position: absolute; 
+    color: transparent; 
+    border-bottom-color: transparent; 
+    border-left-color: white; 
+    border-right-color: transparent;
+    border-top-color: white; 
+    border-style: solid; 
+    border-width: 2px; 
+}
+
+.corner_bottomleft {
+    width: 20px; 
+    height: 20px; 
+    bottom: 0; 
+    left: 0; 
+    position: absolute; 
+    color: transparent; 
+    border-bottom-color: white; 
+    border-left-color: white; 
+    border-right-color: transparent;
+    border-top-color: transparent; 
+    border-style: solid; 
+    border-width: 2px; 
 }

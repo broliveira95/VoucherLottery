@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VoucherService } from '@app/voucher/voucher.service';
 import { LocalStorageService } from '@app/local-storage.service';
-import { VoucherState } from '@app/voucher/voucher.state';
 import { environment } from '@env/environment';
 import { Router } from '@angular/router';
 
@@ -31,11 +30,12 @@ export class VoucherComponent implements OnInit {
           this.localStorageService.setLocalStorage(this.dataToShow$);
         }
         else {
-          this.route.navigate(['voucher']);
+          this.route.navigate(['error']);
           console.log("error");
         }
       },
       err => {
+        console.log("error: ", err);
           this.route.navigate(["error"]);
         }
       );

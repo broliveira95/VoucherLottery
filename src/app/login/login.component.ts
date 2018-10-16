@@ -22,28 +22,16 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     if (!environment.showLogin) {
+      console.log("error")
       this.route.navigate(['voucher']);
     }
   }
-
   submitEmail() {
     if (this.check && this.newEmail !== "") {
       this.showMessage = false;
       console.log(this.newEmail);
 
-      const loginData = Object.assign(new ObjectLogin(), {
-        Input: { Email: this.newEmail },
-        UserData: {
-          UserType: 5,
-          AppVersion: "1",
-          LanguageID: 1,
-          AppID: "tech.innowave.gaminn.mkt.vvl"
-        }
-      });
-
-      console.log(loginData)
-
-      this.setLoginService.addEmail(loginData).subscribe(data => {
+      this.setLoginService.addEmail(this.newEmail).subscribe(data => {
         console.log('response:', data)
         if (data.Code === 0) {
           if (data.VoucherDetail.Description === null) {

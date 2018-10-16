@@ -1,16 +1,10 @@
 $color-primary-dark: #8EC0E4;
-$color-primary-ligh: #6AAFE6;
+$color-primary-light: #6AAFE6;
 $Distance: 1000px;
 $color-primary: #30A9DE;
 
-
-body{
-  overflow: hidden;
-}
-
-html, body {
+main {
   position: relative;
-  background: #D4DFE6 ;
   min-height: 100%;
   width: 100%;
   display: flex;
@@ -22,6 +16,8 @@ html, body {
 .Container {
   text-align: center;
   position: relative;
+  background: #D4DFE6;
+  padding-bottom: 20px
 }
 
 .MainTitle {
@@ -45,7 +41,7 @@ html, body {
 .Cog {
   width: 7rem;
   height: 7rem;
-  fill: $color-primary-ligh;
+  fill: $color-primary-light;
   transition: easeInOutQuint();
   animation: CogAnimation 5s infinite;
 }
@@ -54,47 +50,4 @@ html, body {
 @keyframes CogAnimation {
     0%   {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
-}
-
-@keyframes SpannerAnimation {
-    0%   {
-      transform: 
-        translate3d(20px, 20px,1px)
-        rotate(0deg);
-    }
-    10% {
-      transform: 
-        translate3d(-$Distance, $Distance, 1px)           
-        rotate(180deg);
-    }
-    15% {
-      transform: 
-        translate3d(-$Distance, $Distance, 1px)           
-        rotate(360deg);
-    }    
-    20% {
-      transform: 
-        translate3d(-$Distance, $Distance, 1px)           
-        rotate(180deg);
-    }
-    30% {
-      transform: 
-        translate3d(-$Distance, $Distance, 1px)           
-        rotate(360deg);
-    }  
-    40% {
-      transform: 
-        translate3d(-$Distance, $Distance, 1px)           
-        rotate(360deg);
-    }
-    50% {
-      transform: 
-        translate3d(-$Distance, $Distance, 1px)           
-        rotate(180deg);
-    }    
-    100% {
-      transform: 
-        translate3d(0, 0px, 0px)           
-        rotate(360deg);
-    }  
 }

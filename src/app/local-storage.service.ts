@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import { VoucherState, VoucherDetail } from '@app/voucher/voucher.state';
+import {VoucherDetail } from '@app/voucher/voucher.state';
 
 
 @Injectable()

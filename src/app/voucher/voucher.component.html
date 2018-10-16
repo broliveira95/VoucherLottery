@@ -9,21 +9,20 @@
     <div class="image1">
       <img class="img-fluid" alt="Image1" src="{{ dataToShow$.ImageUrl }}" style="max-height: 300px">
     </div>
-    <p>
-      VoucherLottery
-    </p>
-    <p class="text-lg"> Description: {{dataToShow$.Description }}</p>
-    <!-- <p>description: {{ ( dataToShow$ | async ).VoucherDetail.Description }}</p>
-      <p>image: {{ ( dataToShow$ | async ).VoucherDetail.ImageUrl }}</p>
-      <p>qrCode: {{ ( dataToShow$ | async ).VoucherDetail.QRCodeImageUrl }}</p> -->
-      
-    <!--<img class="bottomLeft" alt="Image" src="../assets/bottomLeft.png">
-    <img class="bottomRight" alt="Image" src="../assets/bottomRight.png">-->
+      <div class="description">
+        <p> Voucher Lottery </p>
+        <p> Description: {{dataToShow$.Description }}</p>
+      </div>
 
     <div class="qrCode">
-      <img class="img-fluid" alt="QR Code" src="{{dataToShow$.QRCodeImageUrl}}" style="max-height: 200px">
+      <div class="img-fluid" style="position: relative; max-width: 250px; justify-content: center; margin-left: auto; margin-right: auto">
+        <div class="corner_bottomright"></div>
+        <div class="corner_topright"></div>
+        <div class="corner_bottomleft"></div>
+        <div class="corner_topleft"></div>
+        <img class="img-fluid" alt="QR Code" src="{{dataToShow$.QRCodeImageUrl}}" style="max-height: 220px; padding: 4% ">
+      </div>
     </div>
-
   </div>
 </div>
 
